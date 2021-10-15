@@ -1,0 +1,657 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Testimonials</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(200, 112, 34, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(181, 126, 51, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(252, 237, 231, 1);
+}
+.highlight-yellow_background {
+	background: rgba(245, 241, 229, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 1);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(200, 112, 34, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(181, 126, 51, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(252, 237, 231, 1);
+}
+.block-color-yellow_background {
+	background: rgba(245, 241, 229, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 1);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(244, 231, 202, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="0afe0e25-073d-4eac-842e-33d29e551f9e" class="page serif"><header><div class="page-header-icon undefined"><span class="icon">👏</span></div><h1 class="page-title">Testimonials</h1></header><div class="page-body"><div id="99f94220-1584-43e4-9aad-87643b2a9b8e" class="column-list"><div id="6653ccd4-e9f3-40a5-a657-886ec7b7d27e" style="width:50%" class="column"><figure class="block-color-teal_background callout" style="white-space:pre-wrap;display:flex" id="43e72bb3-8a2a-452c-9832-f67f2cc0fc68"><div style="font-size:1.5em"><img class="icon" src="Testimonials%200afe0e25073d4eac842e33d29e551f9e/DonnaleeDigital.jpeg"/></div><div style="width:100%">&quot;Wow. Thanks so much for this. I need to make a hire this month, and I feel like this might make it exponentially easier. 🙏🏾 If you&#x27;re looking to hire, or get hired as, a #productdesigner, #UXresearcher etc. in #Kenya, do check out this great talent directory. Kudos to Lewis Ngugi and Samantha Kitetu for putting this together, and thanks to Tessie Waithira for sharing it with me.&quot;
+<em><strong>- </strong></em><a href="https://twitter.com/DonnaleeDigital/status/1365209463964237824"><em>Donna Truly</em></a></div></figure></div><div id="1ffacf8f-c454-43cf-a090-6df63c0cbb2d" style="width:50%" class="column"><figure class="block-color-yellow_background callout" style="white-space:pre-wrap;display:flex" id="a1d42561-8f8a-48c8-b59e-b0c57f691717"><div style="font-size:1.5em"><img class="icon" src="Testimonials%200afe0e25073d4eac842e33d29e551f9e/Dennis_Mugambi.jpeg"/></div><div style="width:100%">&quot;btw someone reached out via that board...so thanks again&quot;
+<em><strong>- </strong></em><em>Dennis Mugambi</em></div></figure><figure class="block-color-purple_background callout" style="white-space:pre-wrap;display:flex" id="8d38ba9d-39e9-48d4-bb0b-a010e0dc8b4f"><div style="font-size:1.5em"><img class="icon" src="Testimonials%200afe0e25073d4eac842e33d29e551f9e/dennisriungu.jpeg"/></div><div style="width:100%">&quot;I love the visibility created by this design-talent platform Lewis Ngugi and Samantha Mwenda are working on.&quot;
+<em><strong>- </strong></em><a href="https://www.linkedin.com/posts/dennisriungu_product-design-research-talent-directory-activity-6765557996194938880-QAiS"><em>Dennis Riungu</em></a></div></figure><figure class="block-color-red_background callout" style="white-space:pre-wrap;display:flex" id="76d621f3-1f0c-49ee-8d9b-7e15660cd28f"><div style="font-size:1.5em"><img class="icon" src="Testimonials%200afe0e25073d4eac842e33d29e551f9e/Chencha_Jacob.jpeg"/></div><div style="width:100%">&quot;This is awesome 😎!&quot;
+<em><strong>- </strong></em><a href="https://twitter.com/jchex/status/1359760684310032397?s=20"><em>Chencha Jacob</em></a></div></figure></div></div><blockquote id="6c542f4b-242b-4d96-a0ae-5ffd705274b9" class="">Good work as usual from Lewis Ngugi in the product design space. Congratulations on putting together our first Kenyan only design and research talent board.
+Featuring hiring and talent listing</blockquote><p id="dda95d37-3dec-4d15-820b-f0924b76e23a" class=""><a href="https://www.linkedin.com/posts/muthuridennis_11-days-ago-samantha-and-i-came-together-activity-6770607839841943552-99pT"><em>Dennis Muthuri</em></a></p><blockquote id="b655701e-5a02-4569-a5b3-4ca630635d2d" class="">You are our hero Lewis! Thank you, this is very helpful.</blockquote><p id="b7aed06c-b99f-4cae-a4c8-ebe9ba9b3581" class=""><a href="https://twitter.com/BarazaLavet/status/1359755987314434048?s=20"><em>Lavet</em></a></p><blockquote id="d91b390a-6cdf-4418-aea7-766c5b7a0338" class="">Every startup founder: Do you know where I can find a designer?
+I don&#x27;t, but Lewis Ngugi does.
+If you&#x27;re looking for a Kenyan designer 👇👇👇</blockquote><p id="58babe8e-709f-441e-aad2-35640ea3ae30" class=""><a href="https://www.linkedin.com/posts/hateganoana_design-talent-directory-activity-6764977893211684864-pYoU"><em>Oana-Maria Hategan</em></a></p><blockquote id="24fcae97-09ab-44f2-96f2-d0f1314924ab" class="">I ♥️♥️♥️ that my co-worker Lewis Ngugi has kicked off this job board / talent directory for Product (Design &amp; Research) talent in Kenya. Know anyone who could use this resource? Spread the word!</blockquote><p id="1ec1cd10-23ee-4811-9aa3-ff1744b1b4ce" class=""><a href="https://www.linkedin.com/posts/activity-6769913638108090369-OEZy"><em>Tabanitha McDaniel</em></a></p><blockquote id="3a24d371-ba9c-4c98-8944-bf68a7cece7d" class="">Finally!
+Thank you so much</blockquote><p id="99392c79-6ba0-4ffa-a5c8-12fe897a16e3" class=""><a href="https://twitter.com/njorogetm/status/1361568242683285504?s=20"><em>Njoroge</em></a></p><blockquote id="aff1cf49-696f-440d-a1b5-be354ad613dd" class="">Lewis Ngugi’s passion to spotlight design talent in Nairobi is unmatched!</blockquote><p id="0213c9b4-fb5e-469c-8d14-da747c7a4f40" class=""><a href="https://www.linkedin.com/posts/esthergatemba_design-talent-directory-activity-6763719663043014656-yjq9"><em>Esther Gatemba</em></a></p><blockquote id="3e604308-d583-4de1-b74a-13fc92dc653d" class="">Looking for great designers in Kenya? Have a look at this great resource from Lewis Ngugi who is collating the best and brightest talent in Kenya.</blockquote><p id="02458812-0298-4ad9-bbcb-7664d6e7e9b3" class=""><a href="https://www.linkedin.com/posts/mark-o-keefe-51536754_design-talent-directory-activity-6763340613397037056-L4hS"><em>Mark O&#x27;Keefe</em></a></p><blockquote id="4db05024-1572-4ad1-8843-af21da96510c" class="">This is a great initiative. Kudos 👏</blockquote><p id="3aee48a5-e482-41c5-9b0b-193deb2d83b4" class=""><a href="https://twitter.com/mikekivuva/status/1361238657261318147?s=20"><em>Mike Kivuva</em></a></p><blockquote id="d30f3377-5705-4322-84a9-e137bf035289" class="">softt, quite solid!</blockquote><p id="e846f905-dab8-471e-8a2e-3ee6dea5d2af" class=""><a href="https://twitter.com/WoleAtunbi/status/1361246923651489792?s=20"><em>Wole Atunbi</em></a></p><blockquote id="23997fcb-012e-41bd-964d-902ee1705c00" class="">This is really great Lewis Ngugi !!</blockquote><p id="cf1a6ce2-71a7-415e-b273-1c525d5f01b9" class=""><a href="https://www.linkedin.com/feed/update/urn:li:activity:6763340613397037056?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6763340613397037056%2C6763391165262774272%29"><em>Kenneth M. Kinyanjui</em></a></p><blockquote id="5fdbe961-1788-4b3b-b48f-ba15e79174ae" class="">If you&#x27;re looking for product design and research folk in #Kenya, check out this list: <a href="https://lnkd.in/d3bT7qa">https://lnkd.in/d3bT7qa</a>
+Looking forward to the first #Tanzanian, #Rwandan and #Ugandan to be featured in the directory, and maybe the rest of Africa after? Add yourself here - <a href="https://lnkd.in/dpDAFc6">https://lnkd.in/dpDAFc6</a></blockquote><p id="85b4ca85-e590-488a-9edb-9a7ec5ade432" class=""><a href="https://www.linkedin.com/posts/davidlemayian_11-days-ago-samantha-and-i-came-together-activity-6769709330179600385-08uF"><em>David Lemayian</em></a></p><blockquote id="af1ccb61-033f-4b29-b890-865ff35b2a69" class="">Fantastic</blockquote><p id="2a76c057-764f-4231-9383-86182d60c803" class=""><a href="https://twitter.com/fathermerry/status/1361246133163548672?s=20"><em>Opemipo</em></a></p><blockquote id="6a178107-ddab-467f-8aef-c947398ab7fc" class="">😀 , what can I say, it&#x27;s a great project Lewis! 🚀</blockquote><p id="72022eed-b59c-41f1-921a-80c409596e96" class=""><a href="https://www.linkedin.com/feed/update/urn:li:activity:6769651511493562368?commentUrn=urn%3Ali%3Acomment%3A%28activity%3A6769651511493562368%2C6769659330888261632%29&amp;replyUrn=urn%3Ali%3Acomment%3A%28activity%3A6769651511493562368%2C6769679024357814273%29"><em>Henrik Mattsson</em></a></p><blockquote id="316fae67-9b00-4964-bee8-51b7139c5757" class="">mind-blown! so, I have been working on almost such a product on Notion.
+&amp; I am so thrilled to find this.</blockquote><p id="900d53c1-9212-4fa7-8634-0e74a086e57d" class=""><a href="https://twitter.com/itskrox/status/1366738649228988417?s=20"><em>John Ochuro</em></a></p><blockquote id="c2230ff3-bbb6-40da-ba0c-47b31083b185" class="">Props to <span class="user">@Lewis Kang&#x27;ethe</span> &amp; friends for putting this together. There’s so much Kenyan talent in the product/design space. 🇰🇪🇰🇪🇰🇪</blockquote><p id="3c171e97-345d-413e-95fe-e0f577fef0ab" class=""><a href="https://twitter.com/RoyOlende/status/1359794676644126720"><em>Roy Opata Olende</em></a></p><blockquote id="58afbc55-cd85-4d19-b3d1-95b19ad7437b" class="">Great work Lewis!</blockquote><p id="ce317102-e54f-447f-9dbe-32dd6363dd5f" class=""><a href="https://twitter.com/kiruik/status/1359756651700625409"><em>Kennedy Kirui</em></a></p><blockquote id="76492b33-6961-437a-a9e3-1f1bb8135a15" class="">Found this at the right time. This is a great initiative 👏🏽👏🏽👏🏽</blockquote><p id="b9fcfc9c-a6e3-4e8f-bedf-8bd6ab38f8b9" class=""><a href="https://twitter.com/Greats_Wokabi/status/1359742894412816385"><em>Wokabi</em></a></p><blockquote id="d5cf4ef8-32b2-4221-9bf5-718cd2492ab8" class="">The search is over 👏🏽👏🏽👏🏽</blockquote><p id="756eabb3-8752-4cf5-bcff-249b03a25e83" class=""><a href="https://twitter.com/chriskivaze/status/1359735246904778753"><em>Chris Kivaze</em></a></p><blockquote id="ce418d9b-60a9-4847-8f73-1bc7bf8025a1" class="">Impressive initiative <span class="user">@Lewis Kang&#x27;ethe</span> and @samkitets 🙌🙌
+If you&#x27;re a Kenyan designer/researcher, join the growing list! 😌</blockquote><p id="861aa6c6-f68f-4183-a22f-f37eeb3cbe5d" class=""><a href="https://twitter.com/CarolMweberi/status/1359733036313677825"><em>Carol Mweberi</em></a></p><blockquote id="d9223a46-9b21-46ea-bf0e-f834587af0d9" class="">This is so dope!</blockquote><p id="dc5d5e28-34f4-400e-a794-89b5b564061f" class=""><a href="https://www.linkedin.com/posts/billy-nelson-omingo_notion-the-all-in-one-workspace-for-your-activity-6767009970442539008-VYMo"><em>Billy Nelson Omingo</em></a></p><blockquote id="8b08aad0-b906-49ef-a18e-bf6cc053fc0a" class="">Needful, share with your friends!!</blockquote><p id="073b63da-864a-4cbb-bc52-40745ebf5c4c" class=""><a href="https://twitter.com/NdungeKaru/status/1359730048488603648"><em>Tracy Ndunge Karu</em></a></p><blockquote id="5d89b664-128b-45ca-a278-9bb5d1208626" class="">Keep chugging along - like the way it is coming together.</blockquote><p id="7522cddd-3ec6-48e8-b613-7f17cc1236c5" class=""><a href="https://twitter.com/shirojean/status/1363481322958639105"><em>Dr.Jean Njoroge</em></a></p><blockquote id="98af0415-7660-4c6d-8db6-8a825dc6e036" class="">Amazing Job</blockquote><p id="344f6d44-61f2-40f3-94c6-519b974b79f4" class=""><a href="https://twitter.com/Isaacjumba/status/1363438805399859204"><em>Isaac Jumba</em></a></p><blockquote id="d66f13e5-23fa-470a-86db-722207e15aa7" class="">Awesome work</blockquote><p id="62b0ede9-b55b-497f-b6d4-bc853e7cf932" class=""><a href="https://www.linkedin.com/posts/gloria-osoro-29a636204_product-design-research-talent-directory-activity-6766607615045758976-gkU0"><em>Gloria Osoro</em></a></p><blockquote id="4ede8c9c-a72b-4e0c-9d62-5bfa40a5ed5e" class="">i bet you&#x27;ll find this uber useful for finding folks in kenya</blockquote><p id="71950831-ce55-4640-8305-655981e68c71" class=""><a href="https://twitter.com/earlyattoh/status/1363109412316082178"><em>Early Attoh</em></a></p><blockquote id="8a5e1ae4-3e62-4efe-b718-a15ef6300f42" class="">Try here:  a project run by <span class="user">@Lewis Kang&#x27;ethe</span> </blockquote><p id="fd6943cd-8906-479b-b1ae-09ac7d05764f" class=""><a href="https://twitter.com/Njokie_/status/1364664851407269889"><em>Betti Njokie</em></a></p><blockquote id="987d4d09-35fa-47af-94fb-fb021dd0dc00" class="">Hi @ngeshlew @samkitets this is a great idea, you two!</blockquote><p id="1f2cd443-119f-484d-9d5f-cea070f61196" class=""><a href="https://twitter.com/Eunicekkilonzo/status/1364485729540337664"><em>Eunice Kilonzo-Muraya</em></a></p><blockquote id="86fd68b3-18a8-4ffe-a160-a1468569bcf3" class="">Here’s a cool evolving directory of designers and design researchers in East Africa as compiled by Samantha Kitetu and Lewis Ngugi </blockquote><p id="35def4e6-a253-44d5-9845-93d35b85e889" class=""><a href="https://www.linkedin.com/posts/maqc-eric-gitau_decolonizing-design-thinking-the-conversation-activity-6775993504675041280-iZOj"><em>Dr.Eric Gitau</em></a></p><p id="fb4f99c5-dd89-4535-9379-a93446cbf6a6" class="">
+</p></div></article></body></html>

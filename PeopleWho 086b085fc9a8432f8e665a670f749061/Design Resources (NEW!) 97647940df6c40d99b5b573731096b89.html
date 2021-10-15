@@ -1,0 +1,661 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Design Resources (NEW!)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.highlight-orange {
+	color: rgba(200, 112, 34, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.highlight-yellow {
+	color: rgba(181, 126, 51, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(252, 237, 231, 1);
+}
+.highlight-yellow_background {
+	background: rgba(245, 241, 229, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 1);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(145, 145, 142, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(187, 132, 108, 1);
+}
+.block-color-orange {
+	color: rgba(200, 112, 34, 1);
+	fill: rgba(215, 129, 58, 1);
+}
+.block-color-yellow {
+	color: rgba(181, 126, 51, 1);
+	fill: rgba(203, 148, 51, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(108, 155, 125, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(91, 151, 189, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(167, 130, 195, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(205, 116, 159, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(225, 111, 100, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(252, 237, 231, 1);
+}
+.block-color-yellow_background {
+	background: rgba(245, 241, 229, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 1);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(244, 231, 202, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="97647940-df6c-40d9-9b5b-573731096b89" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👩🏾‍💻</span></div><h1 class="page-title"><strong>Design Resources (NEW!)</strong></h1></header><div class="page-body"><p id="1c022f53-f88c-40d5-90e0-6017b910aac7" class="block-color-teal_background"><strong>You want to contribute? </strong><mark class="highlight-teal"><a href="https://forms.gle/bryXdSCevSRHPQky6"><strong>Share here</strong></a></mark></p><nav id="36503027-c5b1-4d1f-b9ce-01101e5ea170" class="block-color-gray table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#318e0335-7c32-4318-8df2-c01c02afedba">Recommendations from:</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#e3bacb9a-5d53-4cf2-b9d4-e090d4e6d9fb">Scholarships</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#06310ccf-55a3-4f10-ba13-9cd196fc5531">Mentorship</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#06415551-ca5f-447a-ae0a-e0225bc6d6b6">UX Design</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#da7e6ab6-8d49-4360-ac68-e964519e9160">User Research </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a353ce6f-1675-406f-95e6-253cdfcfb141">Product Design</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#46fec202-202c-4871-89ed-db71957b01bc">Design Thinking</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#369998b6-f7d1-4301-9538-e491329c1fa8">Technical UI Design </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#b9f8e45e-f5cb-4e7a-ad2e-3c013e060271">Graphic Design</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#46aece66-39f1-401d-bba3-67519185ed1c">Accessibility </a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#81fe72ce-c242-488f-b073-6359790be25d">Design Handoff</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#347c63df-ffa3-47d2-882a-8a3ef4844b17">Stretch yourself</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#66346b69-c282-4cac-8312-f7f0ddd292da">Other libraries </a></div></nav><p id="94e5a66b-83b9-4b68-bf8e-6329ea74ab6a" class="">
+</p><h3 id="318e0335-7c32-4318-8df2-c01c02afedba" class="">Recommendations from:</h3><ul id="67e8ea4d-0fb1-4a63-b6ef-e184b43e7509" class="bulleted-list"><li style="list-style-type:disc"><a href="https://twitter.com/calexity">Lex Roman</a></li></ul><ul id="7509c9ad-53bb-4554-a7a1-e578e835dcb4" class="bulleted-list"><li style="list-style-type:disc"><a href="https://twitter.com/DennoMugz">Dennis Mugambi</a></li></ul><ul id="cbd69c1d-61c7-411c-ba35-831d233100f0" class="bulleted-list"><li style="list-style-type:disc"><a href="https://twitter.com/BarazaLavet">Lavet Baraza</a></li></ul><ul id="2d030d96-2830-4a67-a5be-8100453a70a2" class="bulleted-list"><li style="list-style-type:disc"><a href="https://www.linkedin.com/in/cecil-cross">Cecil Cross</a></li></ul><ul id="52d51c51-f84d-401c-ba43-9ff7654a0954" class="bulleted-list"><li style="list-style-type:disc"><a href="https://twitter.com/timyeo">Tim Yeo 🇦🇺</a> </li></ul><p id="49228c79-3741-42a6-b35d-07669649affc" class="">
+</p><h3 id="e3bacb9a-5d53-4cf2-b9d4-e090d4e6d9fb" class="">Scholarships</h3><p id="ff5b9b19-cfaf-4fa5-bfc3-3253518fca81" class=""><strong><a href="https://productdesignfam.com/about?rel=peoplewhoafrica">Jennifer Wong</a></strong>, Product Design Manager Pitch Pages (formerly DropboxDesign) is offering a 100% free, full-ride scholarship for Cohort 2 of Product Design Fam design bootcamp for people of color. <strong><a href="https://productdesignfam.com/scholarship?rel=peoplewho.africa">Apply to their scholarship</a></strong> for Black and LatinX designers.</p><p id="c6be7da9-2971-42d3-92e0-52033d1fd463" class="">
+</p><h3 id="06310ccf-55a3-4f10-ba13-9cd196fc5531" class="">Mentorship</h3><figure id="4e166148-de4f-4fa8-9704-04b1a57e68d4"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdVoSAkvl1ArLPunWGLbNBZoetnApIa2G9UzG2DLYBDqdNQWA/viewform" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Introvert coach and mentor</div><div class="bookmark-description">Hi. I&#x27;m Tim Yeo. Being an introverted designer in a world that desires extroverts is hard. Hence, my focus is to mentor: - introverted designers - introverted design leaders - design leaders (extrovert/ambivert) who manage introverts My goal is to help introverts operate successfully in a world that desires extroverts.</div></div><div class="bookmark-href"><img src="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_qp2.png" class="icon bookmark-icon"/>https://docs.google.com/forms/d/e/1FAIpQLSdVoSAkvl1ArLPunWGLbNBZoetnApIa2G9UzG2DLYBDqdNQWA/viewform</div></div><img src="https://lh6.googleusercontent.com/_KFIz9w3ugk2tI9Ss08lHOYT1qqWAHoLS9N9PQnaoUvCJchq_pgRjALHXix24zXvc1aAwToz_-s=w1200-h630-p" class="bookmark-image"/></a></figure><figure id="6625caff-1b22-4170-bef4-41ae1bcfa7f9"><a href="http://adplist.org" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">ADPList | Find, Book &amp; Meet Mentors</div></div><div class="bookmark-href"><img src="https://adplist.org/favicon.png" class="icon bookmark-icon"/>http://adplist.org</div></div></a></figure><p id="1d7c49a3-4949-42ec-9a48-a83972ae7fd0" class="">
+</p><h3 id="06415551-ca5f-447a-ae0a-e0225bc6d6b6" class="">UX Design</h3><p id="fd7ed3d2-70f2-4fbc-ba40-e88863f6cb15" class=""><a href="https://www.notion.so/UI-UX-Design-Curriculum-f073ab72a6ed4073afd28a7adfb05e0f"><span class="icon">📚</span>UI/UX Design Curriculum</a> </p><figure id="0b70024e-368d-4401-b426-e75b1b4aae33"><a href="https://www.thefountaininstitute.com/advanced-ux-ui-design" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Advanced UX Course - The Fountain Institute</div><div class="bookmark-description">Ok, we didn&#x27;t actually trademark that term, but we did design this course specifically for designers with full-time jobs. We know you&#x27;re busy. Just show up to class and finish the homework. We&#x27;ll take care of the rest. So far, 94% of our students have completed all 6 assignments.</div></div><div class="bookmark-href"><img src="https://images.squarespace-cdn.com/content/v1/5dc5935a7224ad2839d7e750/1611584499805-BW2D7UOMDMRZ81DIMZ6O/ke17ZwdGBToddI8pDm48kAf-OpKpNsh_OjjU8JOdDKBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpwkCFOLgzJj4yIx-vIIEbyWWRd0QUGL6lY_wBICnBy59Ye9GKQq6_hlXZJyaybXpCc/favicon.ico?format=100w" class="icon bookmark-icon"/>https://www.thefountaininstitute.com/advanced-ux-ui-design</div></div><img src="http://static1.squarespace.com/static/5dc5935a7224ad2839d7e750/t/6050fef31ec0d540bfe96cd5/1615920886338/Advanced_UX_Preview.png?format=1500w" class="bookmark-image"/></a></figure><figure id="c6b6acf3-a405-4d9d-ab17-0e5f02a6b6d0"><a href="https://thehipperelement-com.cdn.ampproject.org/c/s/thehipperelement.com/post/87574750438/ux-crash-course-user-psychology/amp" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">THE HIPPER ELEMENT - UX Crash Course: User Psychology</div><div class="bookmark-description">UX Crash Course: User Psychology My mission for 2014 was to get more people started in User Experience (UX) Design. In January, hundreds of thousands of people did the original UX Crash Course and it was translated into Spanish, Portuguese and Korean by amazing volunteers.</div></div><div class="bookmark-href"><img src="https://thehipperelement-com.cdn.ampproject.org/favicon.ico" class="icon bookmark-icon"/>https://thehipperelement-com.cdn.ampproject.org/c/s/thehipperelement.com/post/87574750438/ux-crash-course-user-psychology/amp</div></div></a></figure><figure id="a4e620f8-a16c-4f8c-9289-0eaa1a5755e4"><a href="https://app.pluralsight.com/paths/skills/ux-design" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">UX Design</div><div class="bookmark-description">UX design encompasses the entire user journey, so it&#x27;s a multidisciplinary role. However, there are clear delineations between UI Design and User Experience as a whole. This skill focuses on the required knowledge needed to implement good UX without the additional layer of UI design.</div></div><div class="bookmark-href"><img src="https://www.pluralsight.com/etc/clientlibs/pluralsight/main/images/favicons/favicon.ico" class="icon bookmark-icon"/>https://app.pluralsight.com/paths/skills/ux-design</div></div></a></figure><figure id="9f51d54d-74e2-4d6a-ab32-b54fdc2669b5"><a href="https://www.futurelearn.com/courses/digital-skills-user-experience" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">User Experience Basics - Online Course</div><div class="bookmark-description">Hi, I&#x27;m Jack, and I work in digital and analytics. And welcome to the User Experience Module. In this model, there are five lessons: User experience - the basics; Understanding your users; Designing the experience; User testing; and Developing and releasing your design.</div></div><div class="bookmark-href"><img src="https://assets.futurelearn.com/packs/app/assets/images/favicon-fa8a2c224a848f933e60d4b730435649.ico" class="icon bookmark-icon"/>https://www.futurelearn.com/courses/digital-skills-user-experience</div></div><img src="https://ugc.futurelearn.com/uploads/images/24/2d/regular_242d9cec-59d3-4e03-b595-b89a0b17eb19.jpg" class="bookmark-image"/></a></figure><figure id="ee45fd27-2f3a-4ba0-aaff-46db9fcdc6b7"><a href="https://grow.google/uxdesign/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google UX Design Certificate</div><div class="bookmark-description">The UX Certificate program, developed by Google, focuses on the foundations of UX design and research, wireframes, prototypes, and testing.</div></div><div class="bookmark-href"><img src="https://www.google.com/images/branding/product/ico/googleg_alldp.ico" class="icon bookmark-icon"/>https://grow.google/uxdesign/</div></div><img src="https://lh3.googleusercontent.com/PX_i7xN0BAYYjbx1oFoykNRuFfshXJ3d59jQEbUIGm-jmTVpjuKYwtXBJ1jyV4GRx6ml_RMQF3hywu9Lrehz4URcwT0iTXf0bp_laMAC8ef8YDJsm1k" class="bookmark-image"/></a></figure><figure id="111c895d-4a70-4c2f-b44d-671c3006f4ab"><a href="https://www.interaction-design.org/courses?gclid=Cj0KCQjwmcWDBhCOARIsALgJ2Qdk6RZLzm9a3E5fuH7YPHojOo7se0Pay4kgxQhZ4BD1aqtc9ncRHc8aAmdIEALw_wcB" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Learn UX Design</div><div class="bookmark-description">Take all our online courses. Pay a flat fee. Get industry-recognized Course Certificates (see example) Self-paced: never miss a class or deadline. Specialized in design-that&#x27;s why the industry trusts us. Unable to get your desired learning path. Please try again later.</div></div><div class="bookmark-href"><img src="https://www.interaction-design.org/favicon.ico" class="icon bookmark-icon"/>https://www.interaction-design.org/courses?gclid=Cj0KCQjwmcWDBhCOARIsALgJ2Qdk6RZLzm9a3E5fuH7YPHojOo7se0Pay4kgxQhZ4BD1aqtc9ncRHc8aAmdIEALw_wcB</div></div><img src="https://public-media.interaction-design.org/images/website-thumbnail-image.png" class="bookmark-image"/></a></figure><figure id="b7a28343-87ad-419a-af88-589aa45e6ec3"><a href="https://info.novoed.com/lxd-course" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Learning Experience Design Course | NovoEd</div><div class="bookmark-description">Create or curate relevant content for your module and provide peer feedback. Provide feedback on your peers&#x27; module submission and collaborate with your team to tweak your module design.</div></div><div class="bookmark-href"><img src="https://info.novoed.com/hubfs/Icons/favicon.ico" class="icon bookmark-icon"/>https://info.novoed.com/lxd-course</div></div><img src="https://info.novoed.com/hubfs/LXD-1.jpg#keepProtocol" class="bookmark-image"/></a></figure><figure id="b0bbc3b2-c58a-40ed-a6ac-4e401450f465"><a href="https://pace.oregonstate.edu/catalog/learning-experience-design-lxd-certificate" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Learning Experience Design (LXD) Certificate</div><div class="bookmark-description">The online education space is thriving and reaching more students every year. E-learning provides an excellent opportunity for working parents taking classes in the evenings, international students looking for diverse education, or anyone who wants to navigate materials on their schedule and collaborate in an online environment.</div></div><div class="bookmark-href"><img src="https://pace.oregonstate.edu/sites/default/themes/paceface_bootstrap/favicon.ico" class="icon bookmark-icon"/>https://pace.oregonstate.edu/catalog/learning-experience-design-lxd-certificate</div></div><img src="https://pace.oregonstate.edu/sites/default/files/styles/course_banner_large/public/images/course/cover/lx-design-certificate.jpg?itok=N9JwHVbm" class="bookmark-image"/></a></figure><figure id="38dd1c34-d240-4f1f-b939-5cadcaec12eb"><a href="https://www.springboard.com/workshops/ux-career-track/?utm_source=Google&amp;utm_medium=cpc&amp;utm_campaign=crush_uxc_design&amp;utm_term=user_experience_design_courses_broad_uxc&amp;utm_content=ux_design_course&amp;keyword_id=ux_design_course" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">UX Design Bootcamp: Become a UX Designer, Job Guaranteed</div><div class="bookmark-description">Looking for a UX bootcamp? Try Springboard! Get 1:1 mentoring &amp; complete 3 in-depth projects to help build your portfolio. ✓ Get a job or your money back!</div></div><div class="bookmark-href"><img src="https://www.springboard.com/homepage-assets/favicon.ico" class="icon bookmark-icon"/>https://www.springboard.com/workshops/ux-career-track/?utm_source=Google&amp;utm_medium=cpc&amp;utm_campaign=crush_uxc_design&amp;utm_term=user_experience_design_courses_broad_uxc&amp;utm_content=ux_design_course&amp;keyword_id=ux_design_course</div></div><img src="https://i.imgur.com/bk4BFPe.png" class="bookmark-image"/></a></figure><figure id="1baa14b7-2515-48e1-8745-e953f3dd9638"><a href="https://app.flatironschool.com/change-career-today/?utm_source=Google&amp;utm_medium=ppc&amp;utm_campaign=1783341578&amp;utm_content=68680137109&amp;utm_term=user%20interface%20courses&amp;uqaid=346824084936&amp;EAIaIQobChMIn9WKhPO84wIVBp-fCh0V6w6QEAAYAiAAEgKZVvD_BwE&amp;gclid=EAIaIQobChMIn9WKhPO84wIVBp-fCh0V6w6QEAAYAiAAEgKZVvD_BwE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">http://app.flatironschool.com/change-career-today/</div><div class="bookmark-description">For the 74% of job-seeking students in On-Campus Outcomes Report who took full-time salaried jobs during reporting period. Another 26% took full-time contract, internship, apprenticeship, part-time, or freelance role, averaging $30/hr (see outcomes report</div></div><div class="bookmark-href"><img src="https://flatironschool.com/assets/images/favicon.ico" class="icon bookmark-icon"/>https://app.flatironschool.com/change-career-today/?utm_source=Google&amp;utm_medium=ppc&amp;utm_campaign=1783341578&amp;utm_content=68680137109&amp;utm_term=user%20interface%20courses&amp;uqaid=346824084936&amp;EAIaIQobChMIn9WKhPO84wIVBp-fCh0V6w6QEAAYAiAAEgKZVvD_BwE&amp;gclid=EAIaIQobChMIn9WKhPO84wIVBp-fCh0V6w6QEAAYAiAAEgKZVvD_BwE</div></div><img src="https://d9hhrg4mnvzow.cloudfront.net/app.flatironschool.com/change-career-today/e557976e-light-box-sea-bg2_0m80go0m80go00000001o.jpg" class="bookmark-image"/></a></figure><figure id="8aa6e223-c710-43af-bb5d-afed52d5502f"><a href="https://lambdaschool.com/courses/ux-design" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">UX Design | Lambda School</div><div class="bookmark-description">Hands-on training for a career in UX, interaction design, and more.</div></div><div class="bookmark-href"><img src="https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5d12fd0d111260d44ec4b1d0_lambda-icon32.png" class="icon bookmark-icon"/>https://lambdaschool.com/courses/ux-design</div></div><img src="https://assets-global.website-files.com/5cd091cfb5499f22bdf72905/5cd0922159aa32213d6fd7d4_lambda-newlogo.png" class="bookmark-image"/></a></figure><figure id="fac5a510-c265-492a-b563-0de54979c925"><a href="https://akiliplus.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Online UX Design School - Learn UX Design | Akili+</div><div class="bookmark-description">We have built our learning experience to help you succeed in a new design career. We have specifically designed Akili+ for those of you who want to be the best designers.</div></div><div class="bookmark-href"><img src="https://akiliplus.com/images/favicon.png" class="icon bookmark-icon"/>https://akiliplus.com/</div></div><img src="https://akiliplus.com/images/Safaricom%20Logo.png" class="bookmark-image"/></a></figure><figure id="677eef7f-7006-4fda-a1a8-eadc6e81b5b5"><a href="https://learn.givegoodux.com/p/ux-365" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">UX365: on-demand courses, books, resources + training</div><div class="bookmark-description">Joe Natoli has been preaching and practicing the gospel of User and Customer Experience to Fortune 100, 500 and Government organizations for nearly three decades. That work includes commercial industry leaders like Broadridge, Condé Nast, Johns Hopkins, Mettler-Toledo, PHH Arval, SC Johnson and Wolters Kluwer, as well as government agencies like NSF/NCSES, NIH and the Dept.</div></div><div class="bookmark-href"><img src="https://assets.teachablecdn.com/favicon.ico" class="icon bookmark-icon"/>https://learn.givegoodux.com/p/ux-365</div></div><img src="https://www.filepicker.io/api/file/nlFOGtgSTWjEFTSLTJgI" class="bookmark-image"/></a></figure><figure id="f251c69e-e23d-4e07-b88c-9ac800cbf818"><a href="https://www.dropbox.com/sh/466dd4z7muhfl35/AACH08pXiSJF_mHIaBLegH5Na?dl=0" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Google UX Playbooks</div><div class="bookmark-description">Dropbox is a free service that lets you bring your photos, docs, and videos anywhere and share them easily. Never email yourself a file again!</div></div><div class="bookmark-href"><img src="https://cfl.dropboxstatic.com/static/images/favicon-vflUeLeeY.ico" class="icon bookmark-icon"/>https://www.dropbox.com/sh/466dd4z7muhfl35/AACH08pXiSJF_mHIaBLegH5Na?dl=0</div></div><img src="https://www.dropbox.com/static/images/spectrum-icons/generated/content/content-folder_dropbox-large.png" class="bookmark-image"/></a></figure><p id="2ac53489-5931-49e5-85da-7fe3cc7d79cc" class=""><a href="https://www.notion.so/self-study-ux-70dbf356226a4cbc846426ed79f0a271"><span class="icon">🇻🇳</span> self-study.ux </a> </p><h3 id="da7e6ab6-8d49-4360-ac68-e964519e9160" class="">User Research </h3><figure id="388cdc2e-be58-4592-8d2c-6dc118e44e6a"><a href="https://joinlearners.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Learners</div><div class="bookmark-description">Let&#x27;s talk about learning for a moment. Most conversations around access to education focus only on K-12 and college. But education does not-and should not-stop there. The truth is that you can easily stagnate or fall behind once you enter the workforce. It&#x27;s only the lucky few that have great mentors and resources they can learn from day-to-day.</div></div><div class="bookmark-href"><img src="https://joinlearners.com/wp-content/uploads/2021/02/Learners_Favicon.png" class="icon bookmark-icon"/>https://joinlearners.com/</div></div><img src="https://joinlearners.com/wp-content/uploads/2021/02/Learners-SEO-1.png" class="bookmark-image"/></a></figure><figure id="bb9a4ce3-2fbb-4be6-a63d-10f10b847bba"><a href="https://maze.co/guides/ux-research/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Ultimate Guide to UX Research</div><div class="bookmark-description">User experience research is a crucial component of the human-centered design process and an essential part of creating solutions that meet user expectations and deliver value to customers. This comprehensive guide to UX research dives into the fundamentals of research and its various methods and includes tips and best practices from leading industry experts.</div></div><div class="bookmark-href"><img src="https://maze.co/favicon-32x32.png?v=141e522a9c19aabfd2d6a6e2cdf2d809" class="icon bookmark-icon"/>https://maze.co/guides/ux-research/</div></div><img src="https://www.datocms-assets.com/38511/1613404749-1b76bf59-9306-4939-a0ad-51c6b71572c9ux-research.jpeg?auto=format" class="bookmark-image"/></a></figure><p id="7eda03d6-4191-4b70-a21b-a83a67a566e1" class="">
+</p><h3 id="a353ce6f-1675-406f-95e6-253cdfcfb141" class="">Product Design</h3><figure id="17e6ded2-2c0c-4e6f-9f49-203f5a8bb923"><a href="https://www.skillshare.com/classes/Digital-Product-Design-Understanding-Emotional-Design/1541173006?via=browse-rating-emotional-design-layout-grid" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Digital Product Design: Understanding Emotional Design | Jake + Garron | Skillshare</div><div class="bookmark-description">1. Introduction &amp; Why Emotional Design?: designing for people can be really messy. Web and mobile experiences have come a long way, Though thinking back only 5 to 10 years, the focus of online products was on how the Internet was revolutionizing everyday tasks.</div></div><div class="bookmark-href"><img src="https://static.skillshare.com/assets/images/favicons/favicon-512.png" class="icon bookmark-icon"/>https://www.skillshare.com/classes/Digital-Product-Design-Understanding-Emotional-Design/1541173006?via=browse-rating-emotional-design-layout-grid</div></div><img src="https://static.skillshare.com/uploads/video/thumbnails/956188826cbaef80f5de9be46a63af39/original" class="bookmark-image"/></a></figure><figure id="b09d2e3d-c701-4298-892e-9af5f741c6e3"><a href="https://www.udacity.com/course/product-design--ud509" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Product Design</div><div class="bookmark-description">Over the years, Silicon Valley startups have developed a series of frameworks and best practices for product design. Through startup case studies and interviews with industry experts, we want to bring you the best of Silicon Valley with lessons you can apply to influence the design of your mobile or web app.</div></div><div class="bookmark-href"><img src="https://www.udacity.com/favicon.ico" class="icon bookmark-icon"/>https://www.udacity.com/course/product-design--ud509</div></div></a></figure><figure id="5e73e49c-054b-4f61-8811-32806b665f62"><a href="https://www.edx.org/course/product-design-the-delft-design-approach-2" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Product Design: The Delft Design Approach</div><div class="bookmark-description">Do you want to learn how to design? Using the Delft Design Approach, you will learn how to use a number of key design methods to create meaningful products and services.</div></div><div class="bookmark-href"><img src="https://www.edx.org/favicon.ico" class="icon bookmark-icon"/>https://www.edx.org/course/product-design-the-delft-design-approach-2</div></div><img src="https://prod-discovery.edx-cdn.org/media/course/image/5dedf011-dfb5-4ea4-8714-30196590eb52-d940b2594513.small.png" class="bookmark-image"/></a></figure><figure id="9d29c214-27ed-4b3f-aaf3-3634ace7446f"><a href="https://www.udacity.com/course/human-computer-interaction--ud400" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Human-Computer Interaction</div><div class="bookmark-description">Free Course by Offered at Georgia Tech as 6750 Start Free Course About this Course This course is an introductory course on human-computer interaction, covering the principles, techniques, and open areas of development in HCI. Course Cost Timeline Skill Level intermediate Approx.</div></div><div class="bookmark-href"><img src="https://www.udacity.com/favicon.ico" class="icon bookmark-icon"/>https://www.udacity.com/course/human-computer-interaction--ud400</div></div></a></figure><figure id="7c26e339-e9aa-4761-a7b1-b31d17c4170e"><a href="https://www.designbetter.co/principles-of-product-design" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://www.designbetter.co/principles-of-product-design</div></div></a></figure><p id="73eed360-a5c0-42b3-9253-d8ded530adfd" class="">
+</p><h3 id="46fec202-202c-4871-89ed-db71957b01bc" class="">Design Thinking</h3><figure id="1dbcf7d6-dbfc-4129-b9f5-697c574b02e0"><a href="https://www.linkedin.com/learning/learning-design-thinking-lead-change-in-your-organization" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Learning Design Thinking: Lead Change in Your Organization | LinkedIn Learning, formerly Lynda.com</div><div class="bookmark-description">Learn how design thinking can lead to better designs and business solutions. Discover new strategies for ideation and problem solving, such as journey mapping, concepting, and prototyping.</div></div><div class="bookmark-href"><img src="https://static-exp2.licdn.com/sc/p/com.linkedin.learning-guest-frontend%3Alearning-guest-frontend-static-content%2B0.0.427/f/%2Flearning-guest-frontend%2Fimages%2Flearning%2Fplay-icon.ico" class="icon bookmark-icon"/>https://www.linkedin.com/learning/learning-design-thinking-lead-change-in-your-organization</div></div><img src="https://www.linkedin.com/media-proxy/ext?w=1200&amp;h=675&amp;hash=usNp6VddCErqdZF8k%2FjZYm4L0Fc%3D&amp;ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6plxVUzgUv5K_PrkC9q0RIUJDPBy-lWCat-d2fZHTqfsTXZLSiolURcSUBkwQxe-igSTPlFI69LcLmY4Yx3A" class="bookmark-image"/></a></figure><figure id="a34136c9-b6c9-438d-97c9-b8664dc2b6c5"><a href="https://www.ibm.com/design/thinking/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Design thinking courses and certifications - Enterprise Design Thinking</div><div class="bookmark-description">Take design thinking courses, earn certifications, and bring your team along with you.</div></div><div class="bookmark-href"><img src="https://www.ibm.com/design/thinking/icons/icon-48x48.png?v=3c4ffc1ebbeaf970960590372765f9a9" class="icon bookmark-icon"/>https://www.ibm.com/design/thinking/</div></div><img src="https://www.ibm.com/design/thinking/icons/og-edt.jpg" class="bookmark-image"/></a></figure><figure id="7a7a33ef-d7d9-461b-96c2-6b67434611f7"><a href="https://open.hpi.de/courses/designthinking2020" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Design Thinking 4.0 - The Cultural Dimension of Digital Transformation</div><div class="bookmark-description">Design Thinking is an innovation approach, which evolved through the past 12 years from a university program at Stanford and HPI Potsdam to a globally respected and universally applied set of methods and tools for supporting and driving change towards a networked culture in organizations.</div></div><div class="bookmark-href"><img src="https://openhpi.azureedge.net/assets/favicon-8d3fa8fecddf85055b0e7ce37de27f0c2124fa6c4eb59a0004e237afb68a31d3.ico" class="icon bookmark-icon"/>https://open.hpi.de/courses/designthinking2020</div></div><img src="https://s3.xopic.de/openhpi-public/courses/4LbMvaC4bCfTCNefnI2o8Q/visual_v10.png" class="bookmark-image"/></a></figure><figure id="aefe5636-1b2c-4cc7-bf63-128df5977bff"><a href="https://executive-ed.mit.edu/mastering-design-thinking.php?utm_source=Google&amp;utm_medium=Search&amp;utm_campaign=B-6539_US_GG_SE_MDT_Sept_19_Schools&amp;utm_content=MIT_Design_Thinking&amp;utm_term=mit%20master%20design%20thinking&amp;gclid=EAIaIQobChMIgL3Eoai-4wIViMDACh14mA_sEAAYASAAEgIFuPD_BwE" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Mastering Design Thinking | MIT Sloan</div><div class="bookmark-description">Design thinking is a powerful process of problem solving that begins with understanding unmet customer needs. From that insight emerges a process for innovation that encompasses concept development, applied creativity, prototyping, and experimentation. When design thinking approaches are applied to business, the success rate for innovation improves substantially.</div></div><div class="bookmark-href"><img src="https://executive-ed.mit.edu/favicon/favicon-32x32.png" class="icon bookmark-icon"/>https://executive-ed.mit.edu/mastering-design-thinking.php?utm_source=Google&amp;utm_medium=Search&amp;utm_campaign=B-6539_US_GG_SE_MDT_Sept_19_Schools&amp;utm_content=MIT_Design_Thinking&amp;utm_term=mit%20master%20design%20thinking&amp;gclid=EAIaIQobChMIgL3Eoai-4wIViMDACh14mA_sEAAYASAAEgIFuPD_BwE</div></div><img src="https://executive-ed.mit.edu/assets-new/images/banner_mobile.jpg" class="bookmark-image"/></a></figure><figure id="1573934c-57f5-487e-9ad2-817ba9ec9ecf"><a href="https://www.coursera.org/learn/uva-darden-design-thinking-social-sector" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Design Thinking for the Greater Good: Innovation in the Social Sector</div><div class="bookmark-description">Do you work for a nonprofit or in the social sector? Are you struggling to solve the problems and meet the needs of the people you serve? Come learn more about how design thinking, a human-centered approach to problem solving, can help you truly understand an issue, generate ideas worth testing and iterate to find solutions that make a real difference.</div></div><div class="bookmark-href"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-32x32.png" class="icon bookmark-icon"/>https://www.coursera.org/learn/uva-darden-design-thinking-social-sector</div></div><img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~uva-darden-design-thinking-social-sector/XDP~COURSE!~uva-darden-design-thinking-social-sector.jpeg" class="bookmark-image"/></a></figure><p id="88746a09-91a0-4f72-a74d-0004b4297bfb" class="">
+</p><h3 id="369998b6-f7d1-4301-9538-e491329c1fa8" class="">Technical UI Design </h3><figure id="78a2cdac-b7e2-47ee-b842-752b634e0333"><a href="https://www.youtube.com/playlist?list=PLWlUJU11tp4cBWlUZYumVp99dhjx1OyNU" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Figma Snacks</div><div class="bookmark-description">A playlist of 20-sec video tutorials about Figma</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/3a84d4c0/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/playlist?list=PLWlUJU11tp4cBWlUZYumVp99dhjx1OyNU</div></div><img src="https://i.ytimg.com/vi/muu6cKzxutY/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&amp;rs=AOn4CLDkVq101RO1DI_V_6Sld5omi5paNQ&amp;days_since_epoch=18749" class="bookmark-image"/></a></figure><figure id="f8546209-6393-4be6-bc61-8543f2d3c27a"><a href="https://gumroad.com/l/theschoolofdesign" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The School of Design</div><div class="bookmark-description">In addition to being part of a community of lifelong learners who are passionate about design and business, members of the school get access to:A Slack Community;Courses (2-3 / Year) and Workshops;Designer Talks;A Private Library; andDiscounted 1:1 CoachingMembership of The School of Design is currently £95 / £195 Year.</div></div><div class="bookmark-href"><img src="https://gumroad.com/favicon.ico" class="icon bookmark-icon"/>https://gumroad.com/l/theschoolofdesign</div></div><img src="https://public-files.gumroad.com/variants/do5sd5b1ps6e59qqn2prl57toqk4/f2f9c6fc18a80b8bafa38f3562360c0e42507f1c0052dcb708593f7efa3bdab8" class="bookmark-image"/></a></figure><figure id="76ebb546-fad3-40fd-b13a-5c705dc36c72"><a href="http://udemy.com/course/semantic-ui-for-beginners/learn/lecture/6014468#overview" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">http://udemy.com/course/semantic-ui-for-beginners/learn/lecture/6014468#overview</div></div></a></figure><figure id="198eabb6-ef8f-4ff2-9cb4-b7c07618c701"><a href="https://www.udemy.com/share/101u7qBkQScl5aQH4=/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The no BS 2 Hour UI Design Course</div><div class="bookmark-description">Interested in user interface (UI) design? You should be. You can make more as a user interface designer than any other kind of digital design. UI designers enjoy amazing work flexibility and regularly makes top-ten lists for the most in-demand, fastest growing jobs in the US.</div></div><div class="bookmark-href"><img src="https://www.udemy.com/staticx/udemy/images/v6/favicon-128.png" class="icon bookmark-icon"/>https://www.udemy.com/share/101u7qBkQScl5aQH4=/</div></div><img src="https://img-a.udemycdn.com/course/480x270/1611824_be16.jpg?5iPJi7-jAECxd1BnOHxfpdFC7YcRFz2FdGmCvHOcBek1egKrd-d9lChX6kh5OiWI6sZQhyUSmaQlfVomh3leTGv7jtenv4OxEAE_4HOYXafq_UdakXeMQxwjtfAHSQ" class="bookmark-image"/></a></figure><figure id="9869b4e1-b700-45a9-a199-114fa58df004"><a href="http://learnux.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Get ahead in UI/UX Design - Video Courses - learnux.io</div><div class="bookmark-description">A while ago I was encouraged to start with UX and UI design and get early access to learnux.io. I wasn&#x27;t sure how to start and what tools should I use, and for sure I had no idea how to use all this theory from books in practive.</div></div><div class="bookmark-href"><img src="https://learnux.io/images/favicons/favicon.ico" class="icon bookmark-icon"/>http://learnux.io/</div></div><img src="https://learnux.io/uploads/banners/9.jpg" class="bookmark-image"/></a></figure><figure id="9704f755-22a4-4c90-898d-ae8b036817b0"><a href="https://www.awwwards.com/academy/courses/ui-ux" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Awwwards Academy - Live Sessions and Courses</div><div class="bookmark-description">Build your skills, learn new tools, and create world class websites. Awwwards Academy brings you Courses, Workshops and Free Live Sessions from design industry experts specializing in the fields of web design, web development, UX, creative coding, visual design, e-commerce, and a space to make important professional connections with our global community of digital designers and web developers.</div></div><div class="bookmark-href"><img src="https://www.awwwards.com/favicon.ico" class="icon bookmark-icon"/>https://www.awwwards.com/academy/courses/ui-ux</div></div><img src="https://assets.awwwards.com/assets/images/pages/webinars/share-home.png" class="bookmark-image"/></a></figure><figure id="1fda9a29-025b-44cf-a94c-09532ce76e38"><a href="https://designcode.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Design+Code - Learn to design and code React and Swift apps</div><div class="bookmark-description">Don&#x27;t skip design. Learn design and code, by building real apps with React and Swift. Complete courses about the best tools. Purchase includes access to 30+ courses, 100+ premium tutorials, 120+ hours of videos, source files and certificates.</div></div><div class="bookmark-href"><img src="https://designcode.io/favicon-32x32.png?v=6a77b4509c18dad1e579e887b115888c" class="icon bookmark-icon"/>https://designcode.io/</div></div></a></figure><figure id="42aae052-4684-4fbe-9f55-31028ebaac10"><a href="https://www.youtube.com/watch?v=UKKPFc6k_4s&amp;list=PLzGR1QwpTUVKAXf-6K62PM2wPsEL1mjeq&amp;index=25&amp;t=2216s" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Office Hours: Building Style Guides</div><div class="bookmark-description">Rogie and Anthony share how to approach setting up a style guide for your brand and share Figma files from the community to get you started.Thumbtack&#x27;s Desig...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/9528aa7e/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=UKKPFc6k_4s&amp;list=PLzGR1QwpTUVKAXf-6K62PM2wPsEL1mjeq&amp;index=25&amp;t=2216s</div></div><img src="http://i.ytimg.com/vi/UKKPFc6k_4s/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="169881c4-8e80-4360-8523-dbdf2ab9989b"><a href="https://www.process-masterclass.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Process Masterclass - Learn UI/UX design, increase your value as a designer</div><div class="bookmark-description">An in depth online design course for UI/UX design. Learn design thinking and design execution, and increase your value as a designer. Learn about grids, typography, prototypes, and more. Taught by Creative Director Nguyen Le.</div></div><div class="bookmark-href"><img src="https://www.process-masterclass.com/favicon.ico" class="icon bookmark-icon"/>https://www.process-masterclass.com/</div></div><img src="https://unoan92uss-flywheel.netdna-ssl.com/wp-content/uploads/2020/03/slideshow-vespi-fast.gif" class="bookmark-image"/></a></figure><p id="9a344869-977a-455d-8f9d-713af5592181" class="">
+</p><h3 id="b9f8e45e-f5cb-4e7a-ad2e-3c013e060271" class="">Graphic Design</h3><figure id="ff92842b-a544-48af-a867-5bb39c483bd1"><a href="https://thefutur.com/shop" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Shop Courses, Resources, and Templates</div><div class="bookmark-description">Shop our entire catalog of courses, resources, and templates designed to help you grow happy, successful businesses and create an incredible creative career.</div></div><div class="bookmark-href"><img src="https://assets-global.website-files.com/5d816b07d269385f68dbcab0/5d9bac37e33988974813e388_futur-favicon1.png" class="icon bookmark-icon"/>https://thefutur.com/shop</div></div><img src="https://assets-global.website-files.com/5d816b07d269385f68dbcab0/5e66cb1249b7875597936892_shop-opengraph.jpg" class="bookmark-image"/></a></figure><figure id="c314cf74-ad60-40e1-995d-34945268181e"><div class="source"><a href="https://twitter.com/45khaleef/status/1411257952829313025">https://twitter.com/45khaleef/status/1411257952829313025</a></div></figure><p id="cf39323f-2aaa-4b1f-a774-355ee16f476a" class="">
+</p><h3 id="46aece66-39f1-401d-bba3-67519185ed1c" class="">Accessibility </h3><figure id="17326707-84d2-45f8-be21-749694a05a50"><a href="https://www.futurelearn.com/courses/introduction-to-ux-and-accessible-design" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Introduction to UX and Accessible Design - FutureLearn</div><div class="bookmark-description">It takes a visionary to combine creativity and technology. They can transform a simple idea into something new and valuable. Creativity provides the spark, and technology makes the difference. But where will our creativity and technology take us? Will technology affect how and what we create?</div></div><div class="bookmark-href"><img src="https://assets.futurelearn.com/packs/app/assets/images/favicon-fa8a2c224a848f933e60d4b730435649.ico" class="icon bookmark-icon"/>https://www.futurelearn.com/courses/introduction-to-ux-and-accessible-design</div></div><img src="https://ugc.futurelearn.com/uploads/images/09/83/regular_0983d3d3-10d2-4a96-ae33-766fd2c8c4de.jpg" class="bookmark-image"/></a></figure><figure id="cd0c747e-e998-44de-95ac-92b45882d217"><a href="https://www.youtube.com/watch?v=TAzkrXTGEOM&amp;list=PLzGR1QwpTUVKAXf-6K62PM2wPsEL1mjeq&amp;index=20" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">An accessible process for inclusive design (Google I/O &#x27;18)</div><div class="bookmark-description">Learn about a process any team can use to design more inclusively for people with accessibility needs and how Material Design guidelines, tools, and componen...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/9528aa7e/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=TAzkrXTGEOM&amp;list=PLzGR1QwpTUVKAXf-6K62PM2wPsEL1mjeq&amp;index=20</div></div><img src="https://i.ytimg.com/vi/TAzkrXTGEOM/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="ce0a9fdc-d1c1-47f6-98f7-07c33566cb68"><a href="https://cardsforhumanity.idean.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Cards for Humanity</div><div class="bookmark-description">It&#x27;s a practical tool to help you design more inclusively. Inclusive design allows everyone to access, use and enjoy a service experience. No matter what their situation or context. Now you can download our new Figma plugin to play Cards for Humanity right where you&#x27;re designing. Deal two cards: a person and a trait.</div></div><div class="bookmark-href"><img src="https://cardsforhumanity.idean.com/favicon.ico" class="icon bookmark-icon"/>https://cardsforhumanity.idean.com/</div></div></a></figure><p id="10692966-2b32-4654-b54e-73b0ed6c5803" class="">
+</p><p id="6aada9d0-41e7-4320-b0b7-2fbce27dddfa" class="">
+</p><h3 id="81fe72ce-c242-488f-b073-6359790be25d" class="">Design Handoff</h3><figure id="ce089a86-5fb0-4748-8a28-1616da44173f"><a href="https://www.youtube.com/watch?v=PK8dLpwSqbw&amp;list=PLzGR1QwpTUVKAXf-6K62PM2wPsEL1mjeq&amp;index=19" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How to handoff your designs to Engineering</div><div class="bookmark-description">By popular request, a look into my handoff process to Engineering! You&#x27;ll see some of my recent work in this video, and I&#x27;ll show you how I handed off static...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/9528aa7e/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=PK8dLpwSqbw&amp;list=PLzGR1QwpTUVKAXf-6K62PM2wPsEL1mjeq&amp;index=19</div></div><img src="https://i.ytimg.com/vi/PK8dLpwSqbw/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="800a0505-e8c7-4ec0-b022-b610efc5c23e"><a href="https://www.youtube.com/watch?v=D3ZF27bBdn4&amp;list=PLzGR1QwpTUVIgWAgsr6DlyDn3At7TF8li&amp;index=73" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Zeplin Tutorial | Sketch to Zeplin Workflow</div><div class="bookmark-description">In this video I go over my workflow as a UX Designer. I show you how to get started using Zeplin to handoff your design assets. Zeplin is a collaboration too...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/9528aa7e/img/favicon.ico" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=D3ZF27bBdn4&amp;list=PLzGR1QwpTUVIgWAgsr6DlyDn3At7TF8li&amp;index=73</div></div><img src="http://i.ytimg.com/vi/D3ZF27bBdn4/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="3cf113d9-e437-4b39-b810-09ee37d9b472"><a href="https://phase.com/magazine/designer-and-developer-handoff-guide/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Guide to Designer and Developer Handoff</div><div class="bookmark-description">Handing off your designs to developers is one of the most important parts of the design process. Making the designer to developer handoff may go wrong very easily. Here is a comprehensive guide to how to get it right.</div></div><div class="bookmark-href"><img src="https://phase.com/wp-content/themes/Phase/assets/img/favicon/favicon.ico" class="icon bookmark-icon"/>https://phase.com/magazine/designer-and-developer-handoff-guide/</div></div><img src="https://phase.com/wp-content/uploads/2019/02/article_featured_1.jpg" class="bookmark-image"/></a></figure><figure id="85403d8b-d97d-4283-ae1f-3c17fdfc8c8d"><a href="https://www.invisionapp.com/ecourses/designing-with-developers" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Designing With Your Developer in Mind | InVision</div><div class="bookmark-description">Learn to work with developers, not against them, in this free e-course by Kevin Tomasso and InVision.</div></div><div class="bookmark-href"><img src="https://www.invisionapp.com/favicon.ico" class="icon bookmark-icon"/>https://www.invisionapp.com/ecourses/designing-with-developers</div></div></a></figure><p id="3ce76802-e437-40c0-be9e-70dab344f104" class="">
+</p><h3 id="347c63df-ffa3-47d2-882a-8a3ef4844b17" class="">Stretch yourself</h3><figure id="04a31985-0c6e-4013-907b-0adc5e806baf"><a href="https://youtu.be/qGesFpFbLzI" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">How to Become a Designer Without a Design Degree - Grace Ling</div><div class="bookmark-description">Learn actionable steps to learn product design on your own, get experience, stand out as a job seeker, network, and succeed in interviews. (Stream starts at ...</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/3a84d4c0/img/favicon.ico" class="icon bookmark-icon"/>https://youtu.be/qGesFpFbLzI</div></div><img src="http://i.ytimg.com/vi/qGesFpFbLzI/hqdefault.jpg" class="bookmark-image"/></a></figure><figure id="ac08bc8d-1092-4bee-822a-bbb4f741db15"><a href="https://www.acumenacademy.org/course/design-kit-human-centered-design" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Introduction to Human-Centered Design</div><div class="bookmark-description">Learn Fellowship Explore Log In Create innovative solutions to real-world challenges using IDEO.org&#x27;s 4-step process Conduct user interviews and synthesize learnings to uncover insights and identify opportunities for innovation Bring ideas to life using prototypes to test with real users and identify promising solutions to implement Learn for free New courses at no cost-made available every month.</div></div><div class="bookmark-href"><img src="https://www.acumenacademy.org/favicon-32x32.png?v=5382d3af085431f3666dcf83446fdfde" class="icon bookmark-icon"/>https://www.acumenacademy.org/course/design-kit-human-centered-design</div></div><img src="https://images.ctfassets.net/wshh1v3ruvt9/75ZuuRapR8OdeHNwxopXMR/3437b064a0e6029f007a172a3b55f2d2/Acumen-Academy-Selects-29__1_.jpg" class="bookmark-image"/></a></figure><figure id="30503f4e-5e7b-4b39-8b22-11e653c07314"><a href="https://growthdesigners.co/becomeafellow?rel=peoplewho.africa" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Become a Fellow - GrowthDesigners.co</div><div class="bookmark-description">A new program from Molly Norris Walker and Lex Roman created for experienced designers who want to focus their impact. Molly is a serial startup head of design and the author of the book Design-Driven Growth. She leads product teams in design thinking and agile methodologies as a designer focused on business impact.</div></div><div class="bookmark-href"><img src="https://images.squarespace-cdn.com/content/v1/5c021d0eb40b9dfb63220d5d/1569625510041-C38QKC23WNHD0AIKORL7/ke17ZwdGBToddI8pDm48kJJtmSJgjCWAULVC73td-vBZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEstZaG27PIdIPhPlyrDueaX39TvB-bLJbfHNl9EhtfiRur-lC0WofN0YB1wFg-ZW0/favicon.ico?format=100w" class="icon bookmark-icon"/>https://growthdesigners.co/becomeafellow?rel=peoplewho.africa</div></div><img src="http://static1.squarespace.com/static/5c021d0eb40b9dfb63220d5d/t/603c3a0cc7c1e447d79fccbe/1614559767516/Fellows2.png?format=1500w" class="bookmark-image"/></a></figure><figure id="ead58c5c-3226-440a-b132-aae544b9f1ec"><a href="https://growth.design/case-studies/product-psychology-mastery-free-introduction/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Product Psychology Mastery: Course Introduction</div><div class="bookmark-description">Gut feelings, opinions and trends will never improve your product as much as understanding user psychology.</div></div><div class="bookmark-href"><img src="https://growth.design/favicon-16x16.png?v=4" class="icon bookmark-icon"/>https://growth.design/case-studies/product-psychology-mastery-free-introduction/</div></div><img src="https://cdn.growth.design/wp-content/uploads/OG_course_preview.png" class="bookmark-image"/></a></figure><figure id="823105aa-fffb-44f2-8034-4ff3b6a7f208"><a href="https://www.khanacademy.org/partner-content/pixar/storytelling" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The art of storytelling | Pixar in a Box | Computing | Khan Academy</div><div class="bookmark-description">This topic is an exploration of the storytelling process at Pixar.</div></div><div class="bookmark-href"><img src="https://www.khanacademy.org/favicon.ico?logo" class="icon bookmark-icon"/>https://www.khanacademy.org/partner-content/pixar/storytelling</div></div><img src="https://cdn.kastatic.org/images/khan-logo-dark-background-2.png" class="bookmark-image"/></a></figure><figure id="3a2207ff-689c-4722-842f-de027c5869db"><a href="https://www.edx.org/course/ulab-leading-from-the-emerging-future" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">u.lab: Leading From the Emerging Future</div><div class="bookmark-description">In the past year, we have witnessed unprecedented disruption. Climate strikes, the COVID-19 pandemic and global protests against racial injustice all point to a pressing need for societal renewal. To catalyze this renewal we need to learn not from the past, but from a future wanting to be born.</div></div><div class="bookmark-href"><img src="https://www.edx.org/favicon.ico" class="icon bookmark-icon"/>https://www.edx.org/course/ulab-leading-from-the-emerging-future</div></div><img src="https://prod-discovery.edx-cdn.org/organization/logos/2a73d2ce-c34a-4e08-8223-83bca9d2f01d-2cc8854c6fee.png" class="bookmark-image"/></a></figure><figure id="d74dd3de-89de-490c-a711-5ce70e5e5c9a"><a href="https://www.udemy.com/course/storytellingtoinfluence/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Storytelling to Influence</div><div class="bookmark-description">Storytelling to influence is a hot topic today! Sadly, though, how to tell stories to influence is one of those &quot;easier said than done&quot; things in life, isn&#x27;t it? I certainly felt that way years back when I started on my own path at becoming better at storytelling to influence, especially in my professional life where data and rational thought were the only influence tools used.</div></div><div class="bookmark-href"><img src="https://www.udemy.com/staticx/udemy/images/v6/favicon-128.png" class="icon bookmark-icon"/>https://www.udemy.com/course/storytellingtoinfluence/</div></div><img src="https://img-b.udemycdn.com/course/480x270/941752_d931_5.jpg?secure=cGuzcuNBPYYJObpq-X_-RA%3D%3D%2C1618301548" class="bookmark-image"/></a></figure><figure id="974b6393-a38d-45d7-9998-a3169392440d"><a href="https://openclassrooms.com/en/courses/4556196-apply-psychology-to-design?status=published" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://openclassrooms.com/en/courses/4556196-apply-psychology-to-design?status=published</div></div></a></figure><figure id="49380818-6038-4818-8c63-5efad8b2c23e"><a href="https://www.3dfordesigners.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">3D for Designers</div><div class="bookmark-description">We&#x27;re visual designers using 3D for creative work. Join us in learning 3D and other emerging technologies leading the future of art, culture, and style.</div></div><div class="bookmark-href"><img src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/themes/595800/settings_images/sJCBocMQSW2iDmX6hiNw_favicon.png?v=2" class="icon bookmark-icon"/>https://www.3dfordesigners.com/</div></div><img src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-production/sites/13911/images/BrUqIzUITqy6aDivNdwl_seo-thumb.jpg" class="bookmark-image"/></a></figure><figure id="2fd43716-8e93-42af-863a-b12f4bdd7aa0"><a href="https://designcode.io/react" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">React for Designers by Design+Code</div><div class="bookmark-description">So this means that the React Component is similar to the Component you designed in Figma. To make the React Component reusable, we can use Props ... Once you have Props in your React component, it can be reused by importing it to another React component. You can change the props.</div></div><div class="bookmark-href"><img src="https://designcode.io/favicons/favicon-196x196.png" class="icon bookmark-icon"/>https://designcode.io/react</div></div><img src="https://www.dropbox.com/s/u2hdorjg1ejsos3/react-promo.jpg?raw=1" class="bookmark-image"/></a></figure><figure id="1593d918-f0e6-4043-aae4-bfbb3fa1fe04"><a href="https://d.mba/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Design MBA - Learn how to align design and business goals without losing your empathy - d.MBA</div><div class="bookmark-description">The d.MBA is a collective of purposeful design leaders who aim to run more balanced organizations. We believe in a different business world, by design. We believe that the business world would greatly benefit from more design leadership and empathy.</div></div><div class="bookmark-href"><img src="https://images.squarespace-cdn.com/content/v1/5a5331d3b1ffb6ca7203df4e/1594644391253-BIB70NDUJHMH8U4FY2E5/ke17ZwdGBToddI8pDm48kP06O0_IHyRXSOOiqwgWaApZw-zPPgdn4jUwVcJE1ZvWEtT5uBSRWt4vQZAgTJucoTqqXjS3CfNDSuuf31e0tVEsL0EX72Q6S7TgfQYQBQpkz5xM6Qt8VXd_xJGg_ziCFib8BodarTVrzIWCp72ioWw/favicon.ico?format=100w" class="icon bookmark-icon"/>https://d.mba/</div></div><img src="http://static1.squarespace.com/static/5a5331d3b1ffb6ca7203df4e/t/5fc79acfbfb90028be56df80/1606916820460/Social+sharing+d.MBA.png?format=1500w" class="bookmark-image"/></a></figure><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="d04c18eb-5d8b-4260-bc88-1bed1b8596f6"><div style="font-size:1.5em"><span class="icon">💰</span></div><div style="width:100%">When applying for this ☝🏾 <a href="http://d.mba">d.mba</a> program, you can reach out to me (<a href="https://linkedin.com/in/ngeshlew">@ngeshlew</a>) so that I share the alumni application in order for you to get a good discount.</div></figure><p id="67ab1e99-c7c5-448e-9275-b3af7992279e" class="">
+</p><figure id="5e1c7a11-35d9-40f9-94ba-e41e7a7ac745"><a href="https://generalassemb.ly/hit-play-tech-conference-2021/design-week" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Hit Play | General Assembly</div></div><div class="bookmark-href"><img src="https://ga-core-production-herokuapp-com.global.ssl.fastly.net/assets/shared/favicon-362b6546f2d0abc57e58ce80e6265e77ee1a53dd77bcf01e7e28b7a93667ec6b.ico" class="icon bookmark-icon"/>https://generalassemb.ly/hit-play-tech-conference-2021/design-week</div></div></a></figure><figure id="f583dbd0-bde9-42d1-ab96-150946395252"><a href="https://uxtools.co/challenges/?ref=producthunt" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">UX Design Challenges</div><div class="bookmark-description">A set of challenges to practice UX design skills.</div></div><div class="bookmark-href"><img src="https://uxtools.co/favicon-16x16.png" class="icon bookmark-icon"/>https://uxtools.co/challenges/?ref=producthunt</div></div><img src="https://uxtools.co/img/challenges/share.png" class="bookmark-image"/></a></figure><figure id="2ea6d0a3-f1d7-46db-94e4-8f9c4ddae9fc"><a href="https://typographyprinciples.obys.agency" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Typography Principles</div></div><div class="bookmark-href"><img src="https://rm-content.s3.amazonaws.com/59ee0858278cca00855b0b53/upload-f5b211d8-8f47-4c86-ae71-ea783e9c3852_144.png" class="icon bookmark-icon"/>https://typographyprinciples.obys.agency</div></div><img src="https://d3n32ilufxuvd1.cloudfront.net/59ee0858278cca00855b0b53/2333536/screenshot-99de61d6-2db7-467b-a485-6935122ad314_readyscr_1024.jpg" class="bookmark-image"/></a></figure><figure id="6e39e8e0-4661-4e9a-82c0-aa22da74ccf4"><a href="https://www.designencyclopedia.io/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">The Design Encyclopedia | A reference tool for design systems</div><div class="bookmark-description">The Design Encyclopedia is a passion project by Jon Moore, and was designed and built in Webflow (this is an affiliate link). If you would like to reference the encyclopedia in a separate project, partner on a collaboration, or have a general inquiry, send me an email. © 2021 Design Encyclopedia.</div></div><div class="bookmark-href"><img src="https://uploads-ssl.webflow.com/5f42a868d16b65e0bfb66915/5f46b0c67ce5a74a84a20597_favicon.png" class="icon bookmark-icon"/>https://www.designencyclopedia.io/</div></div><img src="https://i.imgur.com/S18HeUs.png" class="bookmark-image"/></a></figure><p id="f6e28408-8929-4328-955f-e7c7d499cee3" class="">
+</p><p id="98f63172-f790-4c0b-b12e-decadff17513" class="">
+</p><p id="ebb4f6de-86dd-4a0c-a53c-20014af2b5dc" class="">
+</p><h3 id="66346b69-c282-4cac-8312-f7f0ddd292da" class="">Other libraries </h3><p id="f3e2cfcf-7411-4e21-92f0-2688e37f5473" class=""><a href="https://www.notion.so/Design-Bookmarks-4a8e4e9c6c7c44b0b937dd056a1db7fa"><img class="icon" src="Design%20Resources%20(NEW!)%2097647940df6c40d99b5b573731096b89/Young.png"/>Design Bookmarks</a> </p><p id="d5a8026a-c132-4837-81b3-39f293d8124b" class=""><a href="https://www.notion.so/Jenann-s-UX-Resources-2021-3ba07faa84704817b08ab85907502a63"><span class="icon">👩🏻‍💻</span>Jenann&#x27;s UX Resources 2021</a> </p><figure id="60082ac9-66c5-4c20-9054-6e7732e77ba0"><a href="https://designxstream.com" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Best resources for designers - Design Xstream</div><div class="bookmark-description">A designer&#x27;s one-stop destination for the best design resources ranging from design freebies to inspirations and lots more.</div></div><div class="bookmark-href"><img src="https://designxstream.com/wp-content/uploads/2021/01/cropped-dx_logo-192x192.png" class="icon bookmark-icon"/>https://designxstream.com</div></div><img src="https://designxstream.com/wp-content/uploads/2021/01/app-promo.png" class="bookmark-image"/></a></figure><figure id="a8b2609c-1033-4da7-a674-4d4753c4e987"><a href="https://resourcesfordesigner.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://resourcesfordesigner.com/</div></div></a></figure><figure id="50875375-1e08-47ed-817c-b72601d8a107"><a href="https://designvalley.club/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">DesignValley | Ultimate design tools depository</div><div class="bookmark-description">Find, Vote, Save, Share your favorite design tools!</div></div><div class="bookmark-href"><img src="https://designvalley.club/favicon.ico" class="icon bookmark-icon"/>https://designvalley.club/</div></div><img src="https://storage.googleapis.com/resources-images/og-images/designvalley-og-image.jpg" class="bookmark-image"/></a></figure><figure id="32444a74-1bbe-405b-aa56-4228d80bfb0f"><a href="https://uxtools.co/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">UX Tools</div><div class="bookmark-description">Learn user-first design with practical skills and tools so you can build better digital experiences.</div></div><div class="bookmark-href"><img src="https://uxtools.co/favicon-16x16.png" class="icon bookmark-icon"/>https://uxtools.co/</div></div><img src="https://uxtools.co/img/default-share.png" class="bookmark-image"/></a></figure><figure id="8b9d09d4-99b4-49e9-9611-e79b2d2e2ae6"><a href="https://www.awwwards.com/academy/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Awwwards Academy - Live Sessions and Courses</div><div class="bookmark-description">Build your skills, learn new tools, and create world class websites. Awwwards Academy brings you Courses, Workshops and Free Live Sessions from design industry experts specializing in the fields of web design, web development, UX, creative coding, visual design, e-commerce, and a space to make important professional connections with our global community of digital designers and web developers.</div></div><div class="bookmark-href"><img src="https://www.awwwards.com/favicon.ico" class="icon bookmark-icon"/>https://www.awwwards.com/academy/</div></div><img src="https://assets.awwwards.com/assets/images/pages/webinars/share-home.png" class="bookmark-image"/></a></figure></div></article></body></html>
