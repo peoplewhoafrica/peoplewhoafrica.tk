@@ -1,0 +1,51 @@
+[[redirects]]
+  from = "https://peoplewhoafrica.notion.site/peoplewhoafrica/PeopleWho-4d3ba5946fb34199bde43408cd052aae"
+  to = "https://peoplewhoafrica.tk"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/"
+  to = "https://peoplewhoafrica.notion.site/PeopleWho-4d3ba5946fb34199bde43408cd052aae"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "https://peoplewhoafrica.notion.site/bc1d0d555f784e28a3b944a8114d8970?v=1fcb6a6cb60b422d905ff13ef2e15a6a"
+  to = "https://peoplewhoafrica.tk/talent"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "https://peoplewhoafrica.notion.site/7470fe0f2e934ad0a8b291f4e2bccf76?v=2ba2523829124acea7792fcee1b3f795"
+  to = "https://peoplewhoafrica.tk/jobs"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/runningcosts"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  
+  [[redirects]]
+  from = "/support"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/talent"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/testimonial"
+  to = "/"
+
+[[redirects]]
+  from = "/thestory"
+  to = "/"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
