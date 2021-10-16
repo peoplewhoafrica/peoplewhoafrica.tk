@@ -45,3 +45,9 @@
   to = "https://peoplewhoafrica.notion.site/The-story-behind-PeopleWho-a110ac3035c34109988aeb5885f1f344"
   status = 302
   force = true # COMMENT: ensure that we always redirect
+
+[[redirects]]
+  from = "/books"
+  to = "https://peoplewhoafrica.notion.site/Books-f26b69b49275405d8a15d6199aff16ee"
+  status = 302
+  force = true # COMMENT: ensure that we always redirect
