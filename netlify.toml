@@ -18,28 +18,30 @@
 
 [[redirects]]
   from = "/runningcosts"
-  to = "/"
-  status = 200
+  to = "https://peoplewhoafrica.notion.site/694397ac905f45eaa06b44affb3e6388?v=56812a27b1fa44a2a93fc7f4aaf3446b"
+  status = 302
   force = true # COMMENT: ensure that we always redirect
   
   [[redirects]]
   from = "/support"
-  to = "/"
-  status = 200
+  to = "https://peoplewhoafrica.notion.site/Supporters-bb4112eb61bc4e97a0b235db6185e6da"
+  status = 302
   force = true # COMMENT: ensure that we always redirect
 
 [[redirects]]
-  from = "/talent"
-  to = "/"
-  status = 200
+  from = "/designresources"
+  to = "https://peoplewhoafrica.notion.site/Design-Resources-NEW-0040bdc03bbe445cb494bfed2629d4df"
+  status = 302
   force = true # COMMENT: ensure that we always redirect
 
 [[redirects]]
-  from = "/testimonial"
-  to = "/"
+  from = "/testimonials"
+  to = "https://peoplewhoafrica.notion.site/Testimonials-f29338c04d9f44b1b9ae1fd211776cb8"
+  status = 302
+  force = true # COMMENT: ensure that we always redirect
 
 [[redirects]]
   from = "/thestory"
-  to = "/"
-  status = 200
+  to = "https://peoplewhoafrica.notion.site/The-story-behind-PeopleWho-a110ac3035c34109988aeb5885f1f344"
+  status = 302
   force = true # COMMENT: ensure that we always redirect
